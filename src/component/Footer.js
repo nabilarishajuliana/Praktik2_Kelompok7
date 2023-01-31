@@ -8,7 +8,7 @@ const Footer = () => {
     <>
          {/* footer */}
     
-          <nav class="navbar" style={{ backgroundColor: 'rgb(171,109,132)' }}>
+          <footer class="footer" style={{ backgroundColor: 'rgb(171,109,132)', marginTop:'30px' }}>
             <div class="container-fluid">
               <div class="container text-center container-fluid">
                 <div class="col">
@@ -37,12 +37,12 @@ const Footer = () => {
                 </div>
                 <div class="col">
                   <div class="copyright">
-                    <b style={{ color: "rgb(205, 188, 188) " }}>Copyright © 2022 TrippleN designed by kelompok 7</b>
+                    <b style={{ color: "rgb(205, 188, 188) " }}>Copyright © 2023 TrippleN designed by kelompok 7</b>
                   </div>
                 </div>
               </div>
             </div>
-          </nav>
+          </footer>
           
     
 
