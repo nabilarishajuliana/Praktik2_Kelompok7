@@ -73,14 +73,7 @@ nav ul .searchbox input {
     background: none;
  }
 
- .card-footer {
-    background-color: rgb(255, 255, 255);
-  }
-  .card-footer a {
-    background-color: rgb(171, 109, 132);
-    border: none;
-  }
-  
+
   .heading {
     justify-content: center;
     text-align: center;
