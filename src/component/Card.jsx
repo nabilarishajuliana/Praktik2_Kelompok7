@@ -5,12 +5,12 @@ import './css/Card.css';
 import { useState, useEffect } from "react";
 import ImageCard from "./ImageCard";
 import Footer from './Footer';
-// import data from "../data.json";
+import Data from "../data.json";
 
 function Card() {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [search, setSearch] = useState('');
+    const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
         fetch(
@@ -45,21 +45,14 @@ function Card() {
                         <input
                             style={{ color: "black" }}
                             class="seacrh"
-                            onChange={(e) => setSearch(e.target.value)}
+                            onChange={(e) => setSearchTerm(e.target.value)}
                             type="text"
                             placeholder="Search " />
                     </li>
                 </ul>
             </nav>
 
-            <div class="body">
-                <div class="text">
-                    <h2>Product</h2>
-                    <p>Choose Your Product</p>
-                </div>
-
-
-                {!isLoading && data.length === 0 && (
+            {!isLoading && data.length === 0 && (
                     <h1 className="text-5xl text-center mx-auto mt-32">No Images Found</h1>
                 )}
 
@@ -67,14 +60,37 @@ function Card() {
                     <h1 className="text-4xl text-center mx-auto mt-24 h-60">Loading...</h1>
                 ) : (
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-                        {data.filter((image) => {
-                            return search.toLowerCase() === '' ? image : image.name.toLowerCase().includes(search)
+                        {Data.filter((image) => {
+                            return searchTerm.toLowerCase() === '' ? image : image.name.toLowerCase().includes(searchTerm)
                         }).map((image) => (
                             <ImageCard key={image.id} image={image} coba={image.image} />
                         ))}
                     </div>
                 )}
-            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* {
+            Data 
+              .filter((val) => {
+                if(searchTerm === ""){
+                  return val;
+                }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                  return val;
+                }
+              })
+              .map((val) => {
+                return(
+                    <ImageCard key={val.id} image={val} coba={val.image}/>
+                //   <div className="template" key={val.id}>
+                //       <img src={val.image} alt="" />
+                //       <h3>{val.name}</h3>
+                //       <p className="description">${val.description}</p>
+                //       <p className="price">${val.price}</p>
+                //   </div> 
+                )
+              })
+          } */}
+        </div>
             <Footer />
 
         </>
