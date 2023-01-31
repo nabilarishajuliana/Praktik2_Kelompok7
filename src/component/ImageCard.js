@@ -1,21 +1,26 @@
 import React from "react";
 
 const ImageCard = ({ image }) => {
+  const desc = image.description;
+  const res =desc.substr(0, 40);
 
   return (
-    <div className="w-full mx-auto rounded-md overflow-hidden">
-      <img src={image.image} alt="" className="w-full h-36 md:h-48 object-contain p-2 my-5"/>
+    <div className="bg-pink-100 lg:w-60  rounded-2xl overflow-hidden m-3">
+      <img src={image.image} alt="" className="w-full  h-36 md:h-48 object-contain p-2 mt-5 mb-1 "/>
       <div className="px-6 py-8 text-center" >
-        <div className="font-bold text-indigo-400 text-lg">
+        <div className="font-bold text-black text-lg">
           {image.name}
         </div>
-        <div className="text-indigo-400">
+        <div className="text-black">
           <ul>
             <li>
-              {image.description}
+              {res}...
             </li>
             <li className="text-md">
               <strong>{image.price}</strong>
+            </li>
+            <li className="text-md">
+              {image.category}
             </li>
           </ul>
         </div>
