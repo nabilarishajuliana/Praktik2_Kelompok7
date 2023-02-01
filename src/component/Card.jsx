@@ -12,9 +12,7 @@ function Card() {
     // const [isLoading, setIsLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
 
-    
 
-    
 
     return (
         <>
@@ -46,47 +44,33 @@ function Card() {
 
             <div className="container mx-auto px-12">
                 <div class="body">
-                <div className="text-center text-4xl font-bold p-5">
-                    <h3>Products</h3>
-                </div>
-                {
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                        {Data.filter((image) => {
-                            return searchTerm.toLowerCase() === '' ? image : image.name.toLowerCase().includes(searchTerm)
-                        }).map((image) => (
-                            <ImageCard key={image.id} image={image} coba={image.image} />
-                        ))}
+                    <div className="text-center text-4xl font-bold p-5">
+                        <h3>Products</h3>
                     </div>
-                }
-            </div>
-            </div>
-            
 
-                
+                    <div className='content-center'>
+                        <select className='bg-pink-color1 rounded-md text-center p-2 text-pink-color2 font-bold ' name="select" id="select">
+                            <option className="font-thin" value="">Category</option>
+                            <option className="font-thin" value="Ready">Ready</option>
+                            <option className="font-thin" value="Pre-Order">Pre-Order</option>
+                            <option className="font-thin"value="Sold Out">Sold Out</option>
+                        </select>
+                    </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-          {/* {
-            Data 
-              .filter((val) => {
-                if(searchTerm === ""){
-                  return val;
-                }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
-                  return val;
-                }
-              })
-              .map((val) => {
-                return(
-                    <ImageCard key={val.id} image={val} coba={val.image}/>
-                  <div className="template" key={val.id}>
-                      <img src={val.image} alt="" />
-                      <h3>{val.name}</h3>
-                      <p className="description">${val.description}</p>
-                      <p className="price">${val.price}</p>
-                  </div> 
-                )
-              })
-          } */}
-        </div>
+
+
+                    {
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                            {Data.filter((image) => {
+                                return searchTerm.toLowerCase() === '' ? image : image.name.toLowerCase().includes(searchTerm)
+                            }).map((image) => (
+                                <ImageCard key={image.id} image={image} coba={image.image} />
+                            ))}
+                        </div>
+                    }
+                </div>
+            </div>
+
             <Footer />
 
         </>
