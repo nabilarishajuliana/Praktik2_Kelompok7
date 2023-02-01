@@ -17,7 +17,7 @@ const ImageCard = ({ image }) => {
               {res}...
             </li>
             <li className="text-md">
-              <strong>{image.price}</strong>
+              <strong>Rp. {image.price}</strong>
             </li>
             <li className="text-md">
               {image.category}
