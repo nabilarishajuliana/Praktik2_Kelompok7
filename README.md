@@ -13,7 +13,7 @@ A card-type website with a cake shop theme called TripleN Bakery. This website h
 ### UI Desain Web : 
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
-<a href="https://www.figma.com/file/VU3VbdCXMt9CRYrf8CBW44/Untitled?node-id=0%3A1&t=Lh9R49BLAnptNpVz-1">You can acces it here!!</a>
+<a href="https://drive.google.com/drive/folders/1lPngl6bb7t11_HglsN9OCg1Nqkt4dXkX?usp=share_link">You can acces it here!!</a>
 
 ### Languages : 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
