@@ -47,7 +47,6 @@ function Card() {
                     <div className="text-center text-4xl font-bold p-5">
                         <h3>Products</h3>
                     </div>
-<<<<<<< HEAD
 
                     <div className='content-center'>
                         <select className='bg-pink-color1 rounded-md text-center p-2 text-pink-color2 font-bold ' name="select" id="select">
@@ -60,8 +59,6 @@ function Card() {
 
 
 
-=======
->>>>>>> 09ec0ddcbca5351fc0862b5a56cd94fff19fb743
                     {
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                             {Data.filter((image) => {
